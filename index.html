@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PixelPlay gaming hub: discover games and explore gaming genres.">
+  <title>PixelPlay | Gaming Zone</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">PIXEL<span>PLAY</span><small> GAMING ZONE</small></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav id="navLinks" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#games">Games</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="badge">⚡ LEVEL UP YOUR WORLD</span>
+        <h1>ENTER THE<br><span>GAMEVERSE.</span></h1>
+        <p>Discover exciting games, explore new worlds, and find your next gaming obsession.</p>
+        <a href="#games" class="primary-btn">EXPLORE GAMES <span>→</span></a>
+        <div class="hero-numbers">
+          <div><strong id="gameStat">06</strong><span>FEATURED GAMES</span></div>
+          <div><strong>04</strong><span>GAME GENRES</span></div>
+          <div><strong>∞</strong><span>FUN AWAITS</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="neon-circle"></div>
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1100&q=85" alt="Gaming setup with computer screens">
+        <div class="floating-card">🎮 READY PLAYER ONE?</div>
+      </div>
+    </section>
+
+    <section class="games section" id="games">
+      <div class="section-heading">
+        <span class="eyebrow">YOUR NEXT ADVENTURE</span>
+        <h2>FEATURED <span>GAMES</span></h2>
+        <p>Search, filter, and save your favorite games.</p>
+      </div>
+
+      <div class="search-wrap">
+        <input type="search" id="searchInput" placeholder="Search games..." aria-label="Search games">
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-category="all">All Games</button>
+        <button class="filter-btn" data-category="action">Action</button>
+        <button class="filter-btn" data-category="adventure">Adventure</button>
+        <button class="filter-btn" data-category="racing">Racing</button>
+        <button class="filter-btn" data-category="strategy">Strategy</button>
+      </div>
+
+      <div class="game-grid" id="gameGrid">
+        <article class="game-card" data-category="action" data-name="Shadow Strike">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Competitive gaming arena" loading="lazy">
+            <span class="genre-tag">ACTION</span>
+            <button class="favorite-btn" aria-label="Favorite Shadow Strike" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Shadow Strike</h3>
+            <p>Fast-paced combat and competitive challenges.</p>
+            <div class="game-bottom"><span>⚔️ Action</span><button class="details-btn" data-game="Shadow Strike">Explore →</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="adventure" data-name="Lost Worlds">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Colorful gaming station" loading="lazy">
+            <span class="genre-tag">ADVENTURE</span>
+            <button class="favorite-btn" aria-label="Favorite Lost Worlds" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Lost Worlds</h3>
+            <p>Explore mysterious places and uncover secrets.</p>
+            <div class="game-bottom"><span>🧭 Adventure</span><button class="details-btn" data-game="Lost Worlds">Explore →</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="racing" data-name="Turbo Rush">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="Sports car ready for a race" loading="lazy">
+            <span class="genre-tag">RACING</span>
+            <button class="favorite-btn" aria-label="Favorite Turbo Rush" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Turbo Rush</h3>
+            <p>Race at full speed through thrilling tracks.</p>
+            <div class="game-bottom"><span>🏎️ Racing</span><button class="details-btn" data-game="Turbo Rush">Explore →</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="strategy" data-name="Kingdom Tactics">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?auto=format&fit=crop&w=800&q=80" alt="Fantasy gaming world" loading="lazy">
+            <span class="genre-tag">STRATEGY</span>
+            <button class="favorite-btn" aria-label="Favorite Kingdom Tactics" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Kingdom Tactics</h3>
+            <p>Build your strategy and lead your team.</p>
+            <div class="game-bottom"><span>♟️ Strategy</span><button class="details-btn" data-game="Kingdom Tactics">Explore →</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="action" data-name="Cyber Arena">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80" alt="Gaming monitor and console setup" loading="lazy">
+            <span class="genre-tag">ACTION</span>
+            <button class="favorite-btn" aria-label="Favorite Cyber Arena" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Cyber Arena</h3>
+            <p>Enter a futuristic world of skill and survival.</p>
+            <div class="game-bottom"><span>🚀 Action</span><button class="details-btn" data-game="Cyber Arena">Explore →</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="adventure" data-name="Mystic Quest">
+          <div class="game-image">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Mysterious fantasy landscape" loading="lazy">
+            <span class="genre-tag">ADVENTURE</span>
+            <button class="favorite-btn" aria-label="Favorite Mystic Quest" aria-pressed="false">♡</button>
+          </div>
+          <div class="game-info">
+            <h3>Mystic Quest</h3>
+            <p>Embark on a fantasy journey full of surprises.</p>
+            <div class="game-bottom"><span>🗺️ Adventure</span><button class="details-btn" data-game="Mystic Quest">Explore →</button></div>
+          </div>
+        </article>
+      </div>
+
+      <p id="emptyMessage" class="empty-message" hidden>No games found. Try another search!</p>
+      <p class="favorite-summary">❤️ Favorite games: <strong id="favoriteCount">0</strong></p>
+    </section>
+
+    <section class="community section" id="community">
+      <div class="community-content">
+        <span class="eyebrow">JOIN THE EXPERIENCE</span>
+        <h2>YOUR GAME.<br>YOUR RULES.</h2>
+        <p>Discover your favorite genres, build a list of games you love, and make your next gaming session memorable.</p>
+        <a href="#games" class="primary-btn">FIND YOUR NEXT GAME →</a>
+      </div>
+      <div class="community-image">
+        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85" alt="Gaming entertainment setup" loading="lazy">
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-heading">
+        <span class="eyebrow">CONTACT THE TEAM</span>
+        <h2>LET'S CONNECT</h2>
+        <p>Share your feedback or suggest a game for our next collection.</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us what you think..." required></textarea>
+
+        <button type="submit" class="primary-btn">SEND MESSAGE →</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">PIXEL<span>PLAY</span></a>
+    <p>PRESS START. PLAY YOUR WAY.</p>
+    <p class="copyright">© <span id="year"></span> PixelPlay. Student demo project.</p>
+  </footer>
+
+  <dialog id="gameDialog" class="game-dialog">
+    <button id="dialogClose" class="dialog-close" aria-label="Close game details">×</button>
+    <span class="eyebrow">GAME DETAILS</span>
+    <h2 id="dialogTitle">Game Title</h2>
+    <p id="dialogText"></p>
+    <button id="dialogDone" class="primary-btn">LET'S GO!</button>
+  </dialog>
+</body>
+</html>
